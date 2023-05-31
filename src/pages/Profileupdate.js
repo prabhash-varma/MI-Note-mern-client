@@ -16,7 +16,7 @@ function Profileupdate() {
   const updateHandler = (e) => {
     e.preventDefault();
 
-    Axios.post("http://localhost:3001/updateprofile",{  
+    Axios.post("https://mi-note-mern-server.vercel.app/updateprofile",{  
       firstName:firstName,
       lastName:lastName,
       country:country,

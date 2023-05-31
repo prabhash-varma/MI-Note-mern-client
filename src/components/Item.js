@@ -12,7 +12,7 @@ function Item(props) {
 
     const deleteItem = (itemid) => {
         console.log(itemid);
-        Axios.post("http://localhost:3001/deleteitem", {
+        Axios.post("https://mi-note-mern-server.vercel.app/deleteitem", {
             itemid: itemid
         }, { headers: { "authorization": `bearer ${localStorage.getItem("token")}` } }).then((response) => {
 

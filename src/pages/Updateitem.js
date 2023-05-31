@@ -26,7 +26,7 @@ function Updateitem() {
         }
 
 
-        Axios.post("http://localhost:3001/updateitem",{
+        Axios.post("https://mi-note-mern-server.vercel.app/updateitem",{
             itemid:itemid,
             title:title,
             description:description

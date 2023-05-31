@@ -20,7 +20,7 @@ function Home() {
       return;
     }
 
-     Axios.post("http://localhost:3001/additem",{
+     Axios.post("https://mi-note-mern-server.vercel.app/additem",{
       title:title,
       description:description,
       email: userdata.email
@@ -48,7 +48,7 @@ function Home() {
 
 
 useEffect(() => {
-  Axios.get(`http://localhost:3001/getitems?email=${userdata.email}`,{headers:{"authorization":`bearer ${localStorage.getItem("token")}`}}).then((response) => {
+  Axios.get(`https://mi-note-mern-server.vercel.app/getitems?email=${userdata.email}`,{headers:{"authorization":`bearer ${localStorage.getItem("token")}`}}).then((response) => {
     
     if(response.data.auth){
       setItemlist(response.data.itemslist);
